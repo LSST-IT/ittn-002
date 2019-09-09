@@ -28,7 +28,7 @@ environments, there is often a dedicated “platform team” that works on
 maintaining this abstraction on top of the traditional IT “silos”.
 
 Goals
-^^^^^
+-----
 
 This document attempts to define a blueprint and the minimum “seed” hardware
 for a deployment platform with may be easily scaled to 100s of nodes by
@@ -45,7 +45,7 @@ on operational experience.
 Enable staff to manage and administer deployments at remote sites.
 
 Non-Goals
-^^^^^^^^^
+---------
 
 * In its current form, this document does not attempt to address the entirety
   of LSST’s IT needs. The focus is on streamlining the deployment of software
@@ -75,6 +75,7 @@ envisioned to be identical.
 
 Core services
 =============
+
 
 Host Configuration Management
 -----------------------------
@@ -285,29 +286,29 @@ H-A operation and an odd number of nodes is preferred.
 Hardware
 --------
 
-================= ============ ======= ======== ========================================= ==============
-Node type         Min Quantity Sockets Memory   Storage                                   Network
-================= ============ ======= ======== ========================================= ==============
-Network control   2            1-2     128GiB+  2x ssd/nvme (boot), 2x nvme ~1TiB         1x 1Gbps (min)
-k8s master        0 or 3       1-2     64GiB+   2x ssd/nvme (boot)                        1x 1Gbps or 1x 10Gps (depending on network config)
-k8s worker        3            2       8GiB/core min. For general usage; Eg., 384GiB for a ~44core system 2x ssd/nvme (boot), 2x nvme ~1TiB+ (pod ephemeral) 2x 10Gps
-k8s storage       3            2       128GiB+  2x ssd/nvme (boot), 2+ large nvme (ceph)  2x 10Gps (min)
-================= ============ ======= ======== ========================================= ==============
+================= ============ ======= ================================================ ========================================= ==============
+Node type         Min Quantity Sockets Memory                                           Storage                                   Network
+================= ============ ======= ================================================ ========================================= ==============
+Network control   2            1-2     128GiB+                                          2x ssd/nvme (boot), 2x nvme ~1TiB         1x 1Gbps (min)
+k8s master        0 or 3       1-2     64GiB+                                           2x ssd/nvme (boot)                        1x 1Gbps or 1x 10Gps (depending on network config)
+k8s worker        3            2       8GiB/core min. Eg., 384GiB for a ~44core system  2x ssd/nvme (boot), 2x nvme ~1TiB+        2x 10Gps
+k8s storage       3            2       128GiB+                                          2x ssd/nvme (boot), 1+ large nvme (ceph)  2x 10Gps (min)
+================= ============ ======= ================================================ ========================================= ==============
 
 Platform Seeding
 -----------------
 
 The minimal “seed” configuration to boot strap a site would be:
 
-================= ============
-Node type         Min Quantity
-================= ============
-control           2
-k8s worker        3
-k8s storage       3
-Total per site    8
-Total for summit+base+tucson 24
-================= ============
+=============================== ============
+Node type                       Min Quantity
+=============================== ============
+control                         2
+k8s worker                      3
+k8s storage                     3
+Total per site                  8
+Total for (summit+base+tucson)  24
+=============================== ============
 
 Networking
 ==========
