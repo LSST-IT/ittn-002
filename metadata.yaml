@@ -13,7 +13,7 @@ serial_number: '002'
 doc_id: 'ITTN-002'
 
 # Title of the document, without the series/serial designation
-doc_title: 'Bare Metal Provisioning for Tucson/Project Office'
+doc_title: '[Proposed] LSST On-Prem Deployment Platform'
 
 # Author names, ordered as a list. Each author name should be formatted as 'First Last'
 authors:
@@ -37,7 +37,7 @@ authors:
 copyright: '2019, Association of Universities for Research in Astronomy'
 
 # Description. A short, 1-2 sentence statemement used by document indices.
-description: 'A plan for implementing bare metal provisioning of servers located at Tucson/Project Office.'
+description: 'A blueprint for a consistent application deployment platform'
 
 # Abstract, if available
 # abstract: >
