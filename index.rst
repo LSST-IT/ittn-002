@@ -247,7 +247,10 @@ Node Types
 Common to all node types
 ------------------------
 
-All amd64 servers shall have an onboard BMC supporting IPMI 1.5 or newer.
+All amd64 servers shall have an onboard BMC supporting:
+* IPMI 1.5 or newer
+* KVM over IP functionality based on html5/etc. IOW -- not a java applet and
+  does not require the client to download and install software.
 
 Control
 -------
