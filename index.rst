@@ -7,15 +7,14 @@
 Introduction
 ============
 
-Providing a consistent application deployment environment or platform for
-all instances of an application provides a number of benefits.  It reduces
-the need for customized installation procedures to be developed and
-maintained per instance.  It eliminates developer uncertainty as to how
-software will be operated.  It may also reduce the overall IT support burden
-as it typically requires less effort to perform the same operation across
-multiple independent but identical environments than planning for and
-executing different management tasks across heterogeneous deployment
-platforms.
+Providing a consistent application deployment environment or platform for all
+instances of an application provides a number of benefits.  It reduces the need
+for customized installation procedures to be developed and maintained per
+instance.  It eliminates developer uncertainty as to how the software will be
+operated.  It may also reduce the overall IT support burden as it typically
+requires less effort to perform the same operation across multiple independent
+but identical environments than planning for and executing different management
+tasks across heterogeneous deployment platforms.
 
 It is also helpful to think of the “deployment platform”, or simply
 “platform” as a first class IT concept.  Where the platform is a delineation
@@ -248,7 +247,10 @@ Node Types
 Common to all node types
 ------------------------
 
-All amd64 servers shall have an onboard BMC supporting IPMI 1.5 or newer.
+All amd64 servers shall have an onboard BMC supporting:
+* IPMI 1.5 or newer
+* KVM over IP functionality based on html5/etc. IOW -- not a java applet and
+  does not require the client to download and install software.
 
 Control
 -------
