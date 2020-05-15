@@ -432,6 +432,8 @@ UIDs/GIDs
 UID      username
 ======== ============
 61000    arc
+61001    (reserved)
+61002    atadbot
 ======== ============
 
 ======== ============
@@ -439,6 +441,7 @@ GID      groupname
 ======== ============
 61000    arc (reserved/unused)
 61001    archive
+61002    atadbot
 ======== ============
 
 * 70000-79999 is used for general users/groups in freeipa
