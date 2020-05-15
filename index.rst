@@ -426,7 +426,7 @@ a freeIPA instance and re-establishing replication with other instances.
 UIDs/GIDs
 ---------
 
-* 61000-69999 is reserved for DM / "archive" related role accounts
+* 61000-61999 is reserved for DM / "archive" related role accounts
 
 ======== ============
 UID      username
@@ -442,6 +442,20 @@ GID      groupname
 61000    arc
 61001    (reserved/unused)
 61002    atadbot
+======== ============
+
+* 62000-62999 is reserved for Camera / CCS related role accounts
+
+======== ============
+UID      username
+======== ============
+62000    ccs
+======== ============
+
+======== ============
+GID      groupname
+======== ============
+62000    ccs
 ======== ============
 
 * 70000-79999 is used for general users/groups in freeipa
