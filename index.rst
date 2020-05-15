@@ -423,3 +423,22 @@ LDAP services should be federated/replicated across all sites at which
 “on-prem” software will be deployed. Recovery shall consist of re-provisioning
 a freeIPA instance and re-establishing replication with other instances.
 
+UIDs/GIDs
+---------
+
+* 61000-69999 is reserved for DM / "archive" related role accounts
+
+======== ============
+UID      username
+======== ============
+61000    arc
+======== ============
+
+======== ============
+GID      groupname
+======== ============
+61000    arc (reserved/unused)
+61001    archive
+======== ============
+
+* 70000-79999 is used for general users/groups in freeipa
