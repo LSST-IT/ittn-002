@@ -432,15 +432,15 @@ UIDs/GIDs
 UID      username
 ======== ============
 61000    arc
-61001    (reserved)
+61001    (reserved/unused)
 61002    atadbot
 ======== ============
 
 ======== ============
 GID      groupname
 ======== ============
-61000    arc (reserved/unused)
-61001    archive
+61000    arc
+61001    (reserved/unused)
 61002    atadbot
 ======== ============
 
