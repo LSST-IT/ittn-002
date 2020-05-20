@@ -450,12 +450,14 @@ GID      groupname
 UID      username
 ======== ============
 62000    ccs
+62001    ccsadm
 ======== ============
 
 ======== ============
 GID      groupname
 ======== ============
 62000    ccs
+62001    ccsadm
 ======== ============
 
 * 70000-79999 is used for general users/groups in freeipa
