@@ -128,7 +128,7 @@ Self-serve bare-metal
 
 As the LSST on-prem application environment currently involves a lot of
 “bare-metal”, it is important to provide a means for end-use engineers to
-[re-]provision a server without requiring
+[re-]provision a server without requiring physically laying hands on hardware.
 
 DHCP
 ----
