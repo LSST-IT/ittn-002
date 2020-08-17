@@ -66,8 +66,17 @@ digraph top {
         foreman
         puppet
         tftp
-        dns1
         dhcp1
+      }
+
+      subgraph cluster_19 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        dns1
       }
 
       subgraph cluster_18 {
@@ -106,7 +115,7 @@ digraph top {
       }
 
       subgraph cluster_16 {
-        label="rook"
+        label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
         fontsize=12
