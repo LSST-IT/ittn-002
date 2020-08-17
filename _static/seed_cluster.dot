@@ -39,7 +39,7 @@ digraph top {
     fontsize=18
     style=dashed
 
-    subgraph cluster_1 {
+    subgraph cluster_10 {
       label="core1"
       color=dimgray
       fontcolor=dimgray
@@ -56,7 +56,7 @@ digraph top {
         ipa1
       }
 
-      subgraph cluster_17 {
+      subgraph cluster_100 {
         label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -69,7 +69,7 @@ digraph top {
         dhcp1
       }
 
-      subgraph cluster_19 {
+      subgraph cluster_101 {
         label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -79,7 +79,7 @@ digraph top {
         dns1
       }
 
-      subgraph cluster_18 {
+      subgraph cluster_102 {
         label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -90,7 +90,7 @@ digraph top {
       }
     }
 
-    subgraph cluster_2 {
+    subgraph cluster_20 {
       label="core2"
       color=dimgray
       fontcolor=dimgray
@@ -104,7 +104,7 @@ digraph top {
         icingamaster
       }
 
-      subgraph cluster_15 {
+      subgraph cluster_200 {
         label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -114,7 +114,7 @@ digraph top {
         dns2
       }
 
-      subgraph cluster_16 {
+      subgraph cluster_201 {
         label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -124,7 +124,7 @@ digraph top {
         ipa2
       }
 
-      subgraph cluster_13 {
+      subgraph cluster_202 {
         label="vm"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -140,12 +140,12 @@ digraph top {
     ipa1 -> ipa2
   }
 
-  subgraph cluster_3 {
+  subgraph cluster_1 {
     label="kubernetes cluster"
     fontsize=18
     style=dashed
 
-    subgraph cluster_4 {
+    subgraph cluster_40 {
       label="worker3"
       color=dimgray
       fontcolor=dimgray
@@ -156,7 +156,7 @@ digraph top {
       app3
     }
 
-    subgraph cluster_5 {
+    subgraph cluster_50 {
       label="worker2"
       color=dimgray
       fontcolor=dimgray
@@ -168,7 +168,7 @@ digraph top {
       oidc2
     }
 
-    subgraph cluster_6 {
+    subgraph cluster_60 {
       label="worker1"
       color=dimgray
       fontcolor=dimgray
@@ -180,14 +180,14 @@ digraph top {
       oidc1
     }
 
-    subgraph cluster_7 {
+    subgraph cluster_70 {
       label="storage3"
       color=dimgray
       fontcolor=dimgray
       fontsize=12
       style=bold
 
-      subgraph cluster_8 {
+      subgraph cluster_700 {
         label="rook"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -199,14 +199,14 @@ digraph top {
       }
     }
 
-    subgraph cluster_9 {
+    subgraph cluster_80 {
       label="storage2"
       color=dimgray
       fontcolor=dimgray
       fontsize=12
       style=bold
 
-      subgraph cluster_10 {
+      subgraph cluster_800 {
         label="rook"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
@@ -218,14 +218,14 @@ digraph top {
       }
     }
 
-    subgraph cluster_11 {
+    subgraph cluster_90 {
       label="storage1"
       color=dimgray
       fontcolor=dimgray
       fontsize=12
       style=bold
 
-      subgraph cluster_12 {
+      subgraph cluster_900 {
         label="rook"
         color=darkgoldenrod
         fontcolor=darkgoldenrod
