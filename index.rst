@@ -405,6 +405,8 @@ PTP/NTP
 
 At least one ``stratum 1`` time source local to the site shall be available.
 
+See also: `ITTN-009: Summit Time Synchronization <https://ittn-009.lsst.io/>`_
+
 Hardware Spares
 ===============
 
