@@ -124,6 +124,9 @@ single tool to provide:
 * Puppet “external node classifier”
 * Puppet agent report processor
 
+Low-level Foreman deployment details are cover in `ITTN-011: Bootstrapping the
+Deployment Platform <https://ittn-011.lsst.io/>`_.
+
 Self-serve bare-metal
 ^^^^^^^^^^^^^^^^^^^^^
 
