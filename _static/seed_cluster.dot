@@ -19,6 +19,9 @@ digraph top {
     ipa2 [label="ipa\nsecondary"]
     icingamaster [label="icinga\nmaster"]
     puppetdb [label="puppetdb"]
+    rancher1 [label="rancher1"]
+    rancher2 [label="rancher2"]
+    rancher3 [label="rancher3"]
     app1 [label="user apps"]
     app2 [label="user apps"]
     app3 [label="user apps"]
@@ -55,6 +58,7 @@ digraph top {
         dns1
         dhcp1
         ipa1
+        rancher1
       }
 
       subgraph cluster_100 {
@@ -89,6 +93,16 @@ digraph top {
 
         ipa1
       }
+
+      subgraph cluster_103 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        rancher1
+      }
     }
 
     subgraph cluster_20 {
@@ -103,6 +117,7 @@ digraph top {
         dns2
         ipa2
         icingamaster
+        rancher2
       }
 
       subgraph cluster_200 {
@@ -134,6 +149,16 @@ digraph top {
 
         icingamaster
       }
+
+      subgraph cluster_203 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        rancher2
+      }
     }
 
     subgraph cluster_30 {
@@ -147,6 +172,7 @@ digraph top {
         rank=same
         icingamaster
         puppetdb
+        rancher3
       }
 
       subgraph cluster_300 {
@@ -168,12 +194,25 @@ digraph top {
 
         puppetdb
       }
+
+      subgraph cluster_302 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        rancher3
+      }
     }
 
     edge [color=lightblue]
     dns1 -> dns2
     ipa1 -> ipa2
     puppet -> puppetdb
+    rancher1 -> rancher2 [dir=both]
+    rancher2 -> rancher3 [dir=both]
+    rancher3 -> rancher1 [dir=both]
   }
 
   subgraph cluster_1 {
