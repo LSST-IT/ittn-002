@@ -63,9 +63,13 @@ Sites
 
 The following sites shall be considered “on-prem” deployment locations:
 
-* Summit
-* Base
-* Tucson
+===================== ============
+Location              Abbreviation
+===================== ============
+Summit / Cerro Pachón ``cp``
+Base / La Serena      ``ls``
+Tucson                ``tu``
+===================== ============
 
 It is expected that hardware deployed at each site will evolve separately, but
 following a common design, to meet the needs of the application deployed at
