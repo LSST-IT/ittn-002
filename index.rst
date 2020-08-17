@@ -181,9 +181,11 @@ An LDAP implementation needs to be provided, at the very minimum:
 * A means for end-users to change their own account’s passwords and ssh key set
 * Replication (to provide redundancy)
 
-We propose the select of freeIPA as an LDAP service and user self-service
-portal.  freeIPA has been well “battle tested” in large enterprises under
-RedHat Identity Management brand.
+We have selected `freeIPA <https://www.freeipa.org>`_ as the LDAP (and k5)
+service and user self-service portal.  freeIPA has been well “battle tested” in
+large enterprises under RedHat Identity Management brand.
+
+See `ITTN-XXX <https://ittn-xxx.lsst.io/>`_.
 
 Oauth2/OpenID Connect (OIDC)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
