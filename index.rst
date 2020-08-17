@@ -193,18 +193,7 @@ platform environment.
 Monitoring
 ----------
 
-Internal
-^^^^^^^^
-
-https://www.influxdata.com/time-series-platform/telegraf/
-
-May be deployed on k8s as monitoring is not critical for bootstrapping the
-platform environment.
-
-External
-^^^^^^^^
-
-https://icinga.com/
+See `Monitoring over Icinga2 <https://ittn-027.lsst.io/>`_.
 
 Kubernetes
 ----------
