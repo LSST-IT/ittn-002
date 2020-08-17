@@ -116,7 +116,8 @@ provisioning is a key component in being able to recover from a “disaster”.
 
 Due to its ability to manage all of the services necessary to support
 bare-metal provisioning, Eg., PXE booting, DNS, DHCP, tftp, and its integration
-with puppet, we propose TheForeman be selected to manage:
+with puppet, we have selected `TheForeman <https://www.theforeman.org/>`_ as a
+single tool to provide:
 
 * PXE boot/provisioning
 * DNS/DHCP management
