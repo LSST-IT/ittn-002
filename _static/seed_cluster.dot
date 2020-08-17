@@ -15,8 +15,8 @@ digraph top {
     dns1 [label="dns\nprimary"]
     dns2 [label="dns\nsecondary"]
     dhcp1 [label="dhcp"]
-    ldap1 [label="ldap\nprimary"]
-    ldap2 [label="ldap\nsecondary"]
+    ipa1 [label="ipa\nprimary"]
+    ipa2 [label="ipa\nsecondary"]
     app1 [label="user apps"]
     app2 [label="user apps"]
     app3 [label="user apps"]
@@ -52,7 +52,7 @@ digraph top {
         tftp
         dns1
         dhcp1
-        ldap1
+        ipa1
       }
 
       subgraph cluster_17 {
@@ -76,7 +76,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        ldap1
+        ipa1
       }
     }
 
@@ -90,7 +90,7 @@ digraph top {
       {
         rank=same
         dns2
-        ldap2
+        ipa2
       }
 
       subgraph cluster_15 {
@@ -110,13 +110,13 @@ digraph top {
         fontsize=12
         style=dotted
 
-        ldap2
+        ipa2
       }
     }
 
     edge [color=lightblue]
     dns1 -> dns2
-    ldap1 -> ldap2
+    ipa1 -> ipa2
   }
 
   subgraph cluster_3 {
@@ -258,7 +258,7 @@ digraph top {
   // make graph look pretty... not real relationships
   {
     edge [constraint=true style=invis]
-    ldap2 -> etcd1
+    ipa2 -> etcd1
     etcd1 -> oidc1
     oidc1 -> app1
     app1 -> ceph1
@@ -274,10 +274,10 @@ digraph top {
     app1 -> ceph1
     ceph1 -> minio1
 
-    ldap1-> etcd1
-    ldap2-> etcd1
-    ldap1-> ceph1
-    ldap2-> ceph1
+    ipa1-> etcd1
+    ipa2-> etcd1
+    ipa1-> ceph1
+    ipa2-> ceph1
   }
 */
 }
