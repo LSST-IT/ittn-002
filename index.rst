@@ -100,6 +100,8 @@ basic items that should be managed are:
 Due to existing team knowledge with Puppet, it is an uncontroversial choice as
 the host level CM tool.
 
+See `ITTN-005: Puppet Standards and Practices <https://ittn-005.lsst.io/>`_
+
 Bare-metal Provisioning
 -----------------------
 
