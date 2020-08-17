@@ -134,7 +134,16 @@ DHCP
 ----
 
 A universal core network service which is also needed to facilitate PXE boot.
-ISC dhcpd is a very common package.
+`ISC dhcpd <https://www.isc.org/dhcp/>`_ is a very common package and seems to
+be the only fully open source dhcp server implementation that has good
+integration with ``foreman``.  This is unfortunate as the API of this
+implementation leaves much to be desired and the ``dhcpd.leases`` file has to
+be parsed in order to determine the state of the service.
+
+While ISC dhcpd is the only best option for the moment, we should consider
+switching to `ISC Kea <https://www.isc.org/kea/>`_ as soon as there is a viable
+foreman plugin available for it. We should also consider contributing to the
+development of such a plugin.
 
 DNS
 ---
