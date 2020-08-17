@@ -12,11 +12,13 @@ digraph top {
     foreman
     puppet
     tftp
-    dns1 [label="dns\nprimary"]
-    dns2 [label="dns\nsecondary"]
+    dns1 [label="dns1"]
+    dns2 [label="dns2"]
+    dns3 [label="dns3"]
     dhcp1 [label="dhcp"]
-    ipa1 [label="ipa\nprimary"]
-    ipa2 [label="ipa\nsecondary"]
+    ipa1 [label="ipa1"]
+    ipa2 [label="ipa2"]
+    ipa3 [label="ipa3"]
     icingamaster [label="icinga\nmaster"]
     puppetdb [label="puppetdb"]
     rancher1 [label="rancher1"]
@@ -52,13 +54,13 @@ digraph top {
 
       {
         rank=same
-        foreman
-        puppet
-        tftp
         dns1
-        dhcp1
         ipa1
         rancher1
+        foreman
+        dhcp1
+        puppet
+        tftp
       }
 
       subgraph cluster_100 {
@@ -68,10 +70,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        foreman
-        puppet
-        tftp
-        dhcp1
+        dns1
       }
 
       subgraph cluster_101 {
@@ -81,7 +80,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        dns1
+        ipa1
       }
 
       subgraph cluster_102 {
@@ -91,7 +90,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        ipa1
+        rancher1
       }
 
       subgraph cluster_103 {
@@ -101,7 +100,10 @@ digraph top {
         fontsize=12
         style=dotted
 
-        rancher1
+        foreman
+        puppet
+        tftp
+        dhcp1
       }
     }
 
@@ -116,8 +118,8 @@ digraph top {
         rank=same
         dns2
         ipa2
-        icingamaster
         rancher2
+        icingamaster
       }
 
       subgraph cluster_200 {
@@ -147,7 +149,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        icingamaster
+        rancher2
       }
 
       subgraph cluster_203 {
@@ -157,7 +159,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        rancher2
+        icingamaster
       }
     }
 
@@ -170,9 +172,11 @@ digraph top {
 
       {
         rank=same
+        dns3
+        ipa3
+        rancher3
         icingamaster
         puppetdb
-        rancher3
       }
 
       subgraph cluster_300 {
@@ -182,7 +186,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        icingamaster
+        dns3
       }
 
       subgraph cluster_301 {
@@ -192,7 +196,7 @@ digraph top {
         fontsize=12
         style=dotted
 
-        puppetdb
+        ipa3
       }
 
       subgraph cluster_302 {
@@ -204,11 +208,32 @@ digraph top {
 
         rancher3
       }
+
+      subgraph cluster_303 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        icingamaster
+      }
+
+      subgraph cluster_304 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        puppetdb
+      }
     }
 
     edge [color=lightblue]
-    dns1 -> dns2
-    ipa1 -> ipa2
+    ipa1 -> ipa2 [dir=both]
+    ipa2 -> ipa3 [dir=both]
+    ipa3 -> ipa1 [dir=both]
     puppet -> puppetdb
     rancher1 -> rancher2 [dir=both]
     rancher2 -> rancher3 [dir=both]
