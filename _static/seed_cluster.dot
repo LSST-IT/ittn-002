@@ -14,8 +14,7 @@ digraph top {
     tftp
     dns1 [label="dns\nprimary"]
     dns2 [label="dns\nsecondary"]
-    dhcp1 [label="dhcp\nprimary"]
-    dhcp2 [label="dhcp\nsecondary"]
+    dhcp1 [label="dhcp"]
     ldap1 [label="ldap\nprimary"]
     ldap2 [label="ldap\nsecondary"]
     app1 [label="user apps"]
@@ -91,7 +90,6 @@ digraph top {
       {
         rank=same
         dns2
-        dhcp2
         ldap2
       }
 
@@ -103,7 +101,6 @@ digraph top {
         style=dotted
 
         dns2
-        dhcp2
       }
 
       subgraph cluster_16 {
@@ -119,7 +116,6 @@ digraph top {
 
     edge [color=lightblue]
     dns1 -> dns2
-    dhcp1 -> dhcp2
     ldap1 -> ldap2
   }
 
