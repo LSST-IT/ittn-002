@@ -39,7 +39,7 @@ digraph top {
     style=dashed
 
     subgraph cluster_1 {
-      label="ctrl1"
+      label="core1"
       color=dimgray
       fontcolor=dimgray
       fontsize=12
@@ -81,7 +81,7 @@ digraph top {
     }
 
     subgraph cluster_2 {
-      label="ctrl2"
+      label="core2"
       color=dimgray
       fontcolor=dimgray
       fontsize=12
