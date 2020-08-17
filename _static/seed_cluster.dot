@@ -18,7 +18,6 @@ digraph top {
     dhcp2 [label="dhcp\nsecondary"]
     ldap1 [label="ldap\nprimary"]
     ldap2 [label="ldap\nsecondary"]
-    graylog
     app1 [label="user apps"]
     app2 [label="user apps"]
     app3 [label="user apps"]
@@ -91,20 +90,9 @@ digraph top {
 
       {
         rank=same
-        graylog
         dns2
         dhcp2
         ldap2
-      }
-
-      subgraph cluster_13 {
-        label="vm"
-        color=darkgoldenrod
-        fontcolor=darkgoldenrod
-        fontsize=12
-        style=dotted
-
-        graylog
       }
 
       subgraph cluster_15 {

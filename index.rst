@@ -185,10 +185,11 @@ prepared to propose a specific solution, these are popular options:
 Log Aggregation
 ---------------
 
-https://www.graylog.org/
+`graylog <https://www.graylog.org>`_ is a comfortable choice for managing system logs as it is more "syslog" focused that many of the other currently populate general log management stacks.
 
-May be deployed on k8s as log collection is not critical for bootstrapping the
-platform environment.
+Due to the heavy footprint of graylog and elastic search, it should be deployed on a k8s external to the core nodes.
+
+See `ITTN-012: Graylog k8s deployment and configuration <https://ittn-012.lsst.io>`_.
 
 Monitoring
 ----------
