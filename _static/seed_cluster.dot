@@ -17,6 +17,7 @@ digraph top {
     dhcp1 [label="dhcp"]
     ipa1 [label="ipa\nprimary"]
     ipa2 [label="ipa\nsecondary"]
+    icingamaster [label="icinga\nmaster"]
     app1 [label="user apps"]
     app2 [label="user apps"]
     app3 [label="user apps"]
@@ -91,6 +92,7 @@ digraph top {
         rank=same
         dns2
         ipa2
+        icingamaster
       }
 
       subgraph cluster_15 {
@@ -111,6 +113,16 @@ digraph top {
         style=dotted
 
         ipa2
+      }
+
+      subgraph cluster_13 {
+        label="vm"
+        color=darkgoldenrod
+        fontcolor=darkgoldenrod
+        fontsize=12
+        style=dotted
+
+        icingamaster
       }
     }
 
