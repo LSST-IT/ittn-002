@@ -69,6 +69,7 @@ Location              Abbreviation
 Summit / Cerro Pachón ``cp``
 Base / La Serena      ``ls``
 Tucson                ``tu``
+Development (@BDC)    ``dev``
 ===================== ============
 
 It is expected that hardware deployed at each site will evolve separately, but
