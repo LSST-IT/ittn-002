@@ -170,12 +170,13 @@ use a cloud hosted service such as route53 with onsite caching nameservers.
 
 We have decided to use ``route53``, initially, across all sites due to
 historical problems with "private" DNS zones and cross site/remote access.  See
-"Split-View DNS and VPNs" in `ITTN-004 <https://ittn-004.lsst.io/>`_ for a more
-detailed discussion.
+"Split-View DNS and VPNs" in `ITTN-004: LSST On-Prem Domain Name Service (DNS)
+<https://ittn-004.lsst.io/>`_ for a more detailed discussion.
 
 Note that reliable on-site name resolution will have to be provided at the
 summit prior to the start of operations.  See "Summit Degraded Operations" in
-`ITTN-004 <https://ittn-004.lsst.io/>`_.
+`ITTN-004: [Proposed] LSST On-Prem Domain Name Service (DNS)
+<https://ittn-004.lsst.io/>`_.
 
 Identity Management
 -------------------
