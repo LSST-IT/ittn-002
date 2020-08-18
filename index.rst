@@ -192,7 +192,7 @@ We have selected `freeIPA <https://www.freeipa.org>`_ as the LDAP (and k5)
 service and user self-service portal.  freeIPA has been well “battle tested” in
 large enterprises under RedHat Identity Management brand.
 
-See `ITTN-XXX <https://ittn-xxx.lsst.io/>`_.
+See `ITTN-010: User Identification and Authorization <https://ittn-010.lsst.io/>`_.
 
 Oauth2/OpenID Connect (OIDC)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -435,13 +435,13 @@ specific backup.  The foreman configuration database, which will include
 hostname, IPs, mac addresses, disk partitioning templates, etc. will need to be
 backed up off site. The backup process is TBD.
 
-LDAP
-----
+IPA/LDAP
+--------
 
 .. figure:: /_static/ldap_replication.png
    :name: fig-ldap-replication
    :alt: graph of multi-site ldap replication
 
-LDAP services should be federated/replicated across all sites at which
+IPA/LDAP services should be federated/replicated across all sites at which
 “on-prem” software will be deployed. Recovery shall consist of re-provisioning
 a freeIPA instance and re-establishing replication with other instances.
