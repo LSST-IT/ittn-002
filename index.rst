@@ -156,6 +156,11 @@ switching to `ISC Kea <https://www.isc.org/kea/>`_ as soon as there is a viable
 foreman plugin available for it. We should also consider contributing to the
 development of such a plugin.
 
+Puppet code in the `lsst-it/lsst-itconf
+<https://github.com/lsst-it/lsst-itconf>`_ repo is the canonical source for
+DHCP configuration.  E.g.: `site/ls/role/foreman.yaml
+<https://github.com/lsst-it/lsst-itconf/blob/master/hieradata/site/ls/role/foreman.yaml>`_
+
 DNS
 ---
 
