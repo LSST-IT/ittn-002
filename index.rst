@@ -61,14 +61,15 @@ Non-Goals
 Sites
 =====
 
-The following sites shall be considered “on-prem” deployment locations:
+The following sites shall be considered the canonical list of “on-prem”
+deployment locations:
 
 ===================== ============
 Location              Abbreviation
 ===================== ============
 Summit / Cerro Pachón ``cp``
 Base / La Serena      ``ls``
-Tucson                ``tu``
+Tucson                ``tu`` (``tuc`` is depreciated)
 Development (@BDC)    ``dev``
 ===================== ============
 
@@ -76,6 +77,9 @@ It is expected that hardware deployed at each site will evolve separately, but
 following a common design, to meet the needs of the application deployed at
 that location.  The initial “seed” system deployed at each location is
 envisioned to be identical.
+
+The above listed abbreviations shall be used to refer to these sites in
+configuration management code, as DNS sub-domains, etc.
 
 Core services
 =============
