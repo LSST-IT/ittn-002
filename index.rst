@@ -238,6 +238,46 @@ popularity and familarity to past users of Nagios.
 
 See `ITTN-027: Monitoring over Icinga2 <https://ittn-027.lsst.io/>`_.
 
+Artifact Repositories/Mirrors
+-----------------------------
+
+At least the summit will require an on-site binary artifcat and docker image
+repos in order to be able to continue operations without external network
+connectivity.  In addition, we desire the ability to maintain on-site mirrors
+of OS packages in order to improve the speed and reliability of provisioning
+and updates.
+
+We well need to be able to host at least these types of repos:
+
+* Docker images
+* OS Yum mirrors
+* Yum repos for inhouse software
+* Misc. binary artifacts needed for deployment
+
+The project has formaly selected the open source variant of `Nexus Repository
+Manager <https://www.sonatype.com/nexus-repository-oss>`_ for deploying
+observatory control software. See: `LSE-150 Control Software Architecture
+<https://lse-150.lsst.io/>`_.
+
+This requires that an instance of Nexus is maintained, at a minimum, at the
+summit.  We believe that the ultimate architecture will be to maintain a more
+publicly accessible instance for developers to push artifacts too. For example,
+using the current development instance as the "canonical" repos
+`repo-nexus.lsst.org/nexus/ <https://repo-nexus.lsst.org/nexus/>`_ which are
+then mirrored to a summit instance.  We also envision that nexus will be
+deployed upon kubernetes.
+
+However, we would like to maintain the possiblity of using a different package
+for maintaining mirrors of upstream software that is seperate from the nexus
+instance(s) used for hosting project produced artifacts. Of concern, is that it
+may not be possible to configure nexus to mirror the entirity of a yum repo,
+which may result in only frequently accessed packages being cached within a
+nexus "proxy" repo instance.
+
+We note that that `Pulp <https://pulpproject.org/>`_ is a popular option for
+maintaining complete mirrors of yum repositories and the a `kubernetes operator
+for pulp <https://github.com/pulp/pulp-operator>`_ is under active development.
+
 Kubernetes
 ----------
 
@@ -265,13 +305,6 @@ Cephfs/NFS
 Object Storage (s3)
 ^^^^^^^^^^^^^^^^^^^
 
-Package Repository/Mirrors
---------------------------
-
-* Docker images
-* OS Yum mirrors
-* Yum repos for inhouse software
-* Misc. binary artifacts needed for deployment
 
 Node Types
 ==========
