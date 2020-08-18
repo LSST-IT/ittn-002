@@ -230,7 +230,13 @@ See `ITTN-012: Graylog k8s deployment and configuration <https://ittn-012.lsst.i
 Monitoring
 ----------
 
-See `Monitoring over Icinga2 <https://ittn-027.lsst.io/>`_.
+For core system operations we require a monitoring system that will do basic
+up/down monitoring of hosts and generate notifications for state changes.
+
+We have selected `Icinga <https://icinga.com/>`_ to serve this role due its
+popularity and familarity to past users of Nagios.
+
+See `ITTN-027: Monitoring over Icinga2 <https://ittn-027.lsst.io/>`_.
 
 Kubernetes
 ----------
