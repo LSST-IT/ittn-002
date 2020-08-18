@@ -279,32 +279,33 @@ We note that that `Pulp <https://pulpproject.org/>`_ is a popular option for
 maintaining complete mirrors of yum repositories and the a `kubernetes operator
 for pulp <https://github.com/pulp/pulp-operator>`_ is under active development.
 
-Kubernetes
-----------
-
-High-availability
-^^^^^^^^^^^^^^^^^
-
-Deployment
-^^^^^^^^^^
-
-load-balancer
-^^^^^^^^^^^^^
-
-auth
-^^^^
-
-Storage
+Rancher
 -------
 
-Block storage (k8s)
-^^^^^^^^^^^^^^^^^^^
+As we are planning to deploy some core services, E.g., ``graylog``, upon
+Kubernetes, we need a means of managing k8s authentication and authorization
+because "out of the box" `k8s does not provide a means of integrating with LDAP
+<https://kubernetes.io/docs/reference/access-authn-authz/authentication/>`_ or
+IPA.
 
-Cephfs/NFS
-^^^^^^^^^^
+`rancher <https://rancher.com/products/rancher/>`_ has been selected to provide
+a k8s management dashboard and to handle authn/authz integration with freeipa.
+Rancher is essentially the only fully open source management solution that
+works with "vanilla" k8s clusters.  We also appreciate that commercial support
+for Rancher is available.
 
-Object Storage (s3)
-^^^^^^^^^^^^^^^^^^^
+We initially intended for there to be only a single instance of rancher running
+at the summit, which would manage kubernetes clusters across all sites. This
+was primarily motivated as a means of reducing cost should we decided to
+purchase a support agreement.  However, with the ongoing shutdown of the
+summit, we have switched to a "rancher per site" model. Where the site rancher
+handles all k8s clusters local to that site.
+
+Kubernetes
+==========
+
+Core Deployment
+===============
 
 
 Node Types
