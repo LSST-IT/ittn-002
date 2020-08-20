@@ -304,6 +304,28 @@ handles all k8s clusters local to that site.
 Kubernetes
 ==========
 
+We determined that these were the desirable properties of a k8s distribution/installer.
+
+* Support for bare metal
+* Fully opensource
+* Active user community
+* Commercial support option
+
+There are many kubernetes deployment options, including the official
+``kubeadm`` utility. However, it was difficult to find any option that met all
+of those goals in 2019.  The only identified product to check all of the boxes
+was `rke <https://rancher.com/products/rke/>`_.
+
+Our scheme for deployment is to use ``puppet`` to prepare k8s nodes with all of
+the prerequisites for for a functioning cluster and to install ``rke``. However,
+the ``rke`` cli is manually invoked from the command line to create, update,
+and destroy k8s cluster.
+
+The `lsst-it/k8s-cookbook <https://github.com/lsst-it/k8s-cookbook>`_ repo
+contains ``README.md`` files with instructions on how to [re]create our various
+k8s clusters.
+
+
 Core Deployment
 ===============
 
