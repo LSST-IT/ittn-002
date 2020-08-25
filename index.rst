@@ -333,8 +333,8 @@ Core Deployment
 Node Types
 ==========
 
-.. figure:: /_static/seed_cluster.png
-   :name: fig-seed-cluster
+.. figure:: /_static/core_cluster.png
+   :name: fig-core-cluster
    :alt: graph of nodes and services in a minimal "seed" cluster
 
 Common to all node types
