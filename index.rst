@@ -161,6 +161,24 @@ Puppet code in the `lsst-it/lsst-itconf
 DHCP configuration.  E.g.: `site/ls/role/foreman.yaml
 <https://github.com/lsst-it/lsst-itconf/blob/master/hieradata/site/ls/role/foreman.yaml>`_
 
+Static IPs
+^^^^^^^^^^
+
+In general, DHCP leases/reservations should be used for most addressing. There
+are only a few exceptions in which statically assigned IP addresses should be
+used. Namely:
+
+* BMCs on on the core nodes. As the core hypervisor host the VMs which provide DHCP, it is a bootstraping issue to use DHCP for these hosts.
+* The FQDN/management IPs of the core hypervisor hosts.
+* Management interfaces and gateways on devices doing layer3 forwarding.
+* The IPs of forward name resolvers, presumably running on VMs.
+* Secondary IPs on hosts which can't be assigned via DHCP due to duplicate MAC addresses.
+* It may make sense to use static IPs for auth service (TBD)
+
+For virtually everything else, we should relying on service discovery via DNS
+and keep IP addressing flexible.  That includes some management devices such as
+switched PDUs.
+
 DNS
 ---
 
